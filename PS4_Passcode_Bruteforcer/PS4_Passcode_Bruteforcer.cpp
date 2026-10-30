@@ -557,7 +557,7 @@ int main(int argc, char* argv[]) {
         std::cout << "[+] Silence Mode activated. This Window will be quiet..." << std::endl;
     }
     else {
-        std::cout << "Made by hoppers, GPU support added by Pcniado" << std::endl;
+        std::cout << "Made by hoppers, GPU support added by Pcniado, AMD Radeon support by jdPhobos" << std::endl;
     }
 
     package_name = argv[1];
