@@ -16,7 +16,7 @@ struct PkgCryptoData {
 // Returns true on success.
 bool parse_pkg_crypto_data(const std::string& pkg_path, PkgCryptoData& out);
 
-#ifdef USE_CUDA
+#if defined(USE_CUDA) || defined(USE_HIP)
 
 // Check if a CUDA-capable GPU is available.
 bool gpu_available();
@@ -34,7 +34,7 @@ std::string gpu_brute_force(
     const PkgCryptoData& data,
     std::atomic<bool>& passcode_found,
     bool silence_mode,
-    int batch_size_log2 = 23 // 2^23 = ~8M passcodes per kernel launch
+    int intensity_percent = 1 // ИСПРАВЛЕНО: Дефолтное значение для GPU-режима
 );
 
 #else
@@ -46,7 +46,7 @@ inline std::string gpu_brute_force(
     const PkgCryptoData&,
     std::atomic<bool>&,
     bool,
-    int = 23
+    int = 1 // ИСПРАВЛЕНО: Дефолтное значение для CPU-заглушки
 ) { return ""; }
 
 #endif
