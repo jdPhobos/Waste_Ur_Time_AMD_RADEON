@@ -103,7 +103,7 @@ waster_ur_time.exe <путь_к_pkg> <папка_вывода> [--gpu] [--intens
 ## 🤝 Авторы и благодарности (Credits)
 
 * **[hoppers](https://github.com/HoppersPS4)** — Идея проекта, архитектура парсинга заголовков PKG и логика CPU-перебора с RocksDB.
-* ![@Pcniado](https://github.com/Pcniado) — Разработка математического ядра SHA-256 под GPU.
+* **[Pcniado](https://github.com/Pcniado)** — Разработка математического ядра SHA-256 под GPU.
 
 ---
 
